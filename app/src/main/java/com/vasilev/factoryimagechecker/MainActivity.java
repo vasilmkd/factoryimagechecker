@@ -34,16 +34,14 @@ public final class MainActivity extends AppCompatActivity {
             throw new IllegalStateException("Layout must contain a Button with id 'button_submit'");
 
         shamuRadioButton.setOnClickListener(v -> {
-            if (!submitButton.isEnabled()) {
+            if (!submitButton.isEnabled())
                 submitButton.setEnabled(true);
-            }
             tag = CheckerTags.SHAMU_CHECKER_TAG;
         });
 
         anglerRadioButton.setOnClickListener(v -> {
-            if (!submitButton.isEnabled()) {
+            if (!submitButton.isEnabled())
                 submitButton.setEnabled(true);
-            }
             tag = CheckerTags.ANGLER_CHECKER_TAG;
         });
 

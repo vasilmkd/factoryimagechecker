@@ -4,4 +4,4 @@ Small Android app aimed at Nexus Warriors (shamu and angler) who are still waiti
 
 The app uses GCMNetworkManager to schedule a service which checks for the existence of the Factory Images.
 
-The app compiled using the Jack toolchain, which is used to backport Java 8 features (lambdas are used in this app).
+The app is compiled using the Jack toolchain, which is used to backport Java 8 features (lambdas are used in this app).

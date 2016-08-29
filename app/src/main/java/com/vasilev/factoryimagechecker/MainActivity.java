@@ -52,6 +52,7 @@ public final class MainActivity extends AppCompatActivity {
                     .setService(FactoryImageCheckerService.class)
                     .setPeriod(30 * 60)
                     .setTag(tag)
+                    .setUpdateCurrent(true)
                     .build();
             GcmNetworkManager.getInstance(MainActivity.this).schedule(task);
             Toast.makeText(MainActivity.this, R.string.scheduled, Toast.LENGTH_LONG).show();

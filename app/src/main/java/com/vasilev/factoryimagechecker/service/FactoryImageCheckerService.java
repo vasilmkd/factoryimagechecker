@@ -27,7 +27,7 @@ public final class FactoryImageCheckerService extends GcmTaskService {
                     new NotificationCompat.Builder(this);
             builder.setSmallIcon(R.mipmap.ic_launcher);
             builder.setContentTitle("Nougat goodies");
-            builder.setContentText("Go grab that tasty treat");
+            builder.setContentText("Go grab that tasty treat for your " + toCheck.substring(0, toCheck.length() - 2));
             builder.setPriority(NotificationCompat.PRIORITY_HIGH);
             builder.setDefaults(NotificationCompat.DEFAULT_ALL);
 

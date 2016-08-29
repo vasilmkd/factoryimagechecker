@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Factory Image Checker</string>
+    <string name="scheduled">Factory image checker service scheduled</string>
+    <string name="shamu">shamu</string>
+    <string name="angler">angler</string>
+    <string name="submit">Submit</string>
+</resources>

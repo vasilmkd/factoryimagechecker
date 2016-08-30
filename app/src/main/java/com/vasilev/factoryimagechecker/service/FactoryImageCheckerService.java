@@ -17,8 +17,7 @@ public final class FactoryImageCheckerService extends GcmTaskService {
     @Override
     public int onRunTask(TaskParams taskParams) {
         final String tag = taskParams.getTag();
-        final String toCheck = tag.equals(CheckerTags.SHAMU_CHECKER_TAG) ?
-                "shamunr" : "anglernr";
+        final String toCheck = CheckerTags.match(tag);
 
         final boolean result = PageChecker.fromUrl(URL, page -> page.contains(toCheck));
 
@@ -27,7 +26,7 @@ public final class FactoryImageCheckerService extends GcmTaskService {
                     new NotificationCompat.Builder(this);
             builder.setSmallIcon(R.mipmap.ic_launcher);
             builder.setContentTitle("Nougat goodies");
-            builder.setContentText("Go grab that tasty treat for your " + toCheck.substring(0, toCheck.length() - 2));
+            builder.setContentText("Go grab that tasty treat for your " + toCheck.substring(0, toCheck.length() - 1));
             builder.setPriority(NotificationCompat.PRIORITY_HIGH);
             builder.setDefaults(NotificationCompat.DEFAULT_ALL);
 

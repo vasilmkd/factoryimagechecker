@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:text="Notify me about:"/>
+        android:text="@string/notify_me_about"/>
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -35,6 +35,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/angler"/>
+
+        <RadioButton
+            android:id="@+id/radio_volantisg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volantisg"/>
 
     </RadioGroup>
 

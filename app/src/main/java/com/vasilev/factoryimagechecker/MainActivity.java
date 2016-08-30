@@ -29,6 +29,10 @@ public final class MainActivity extends AppCompatActivity {
         if (anglerRadioButton == null)
             throw new IllegalStateException("Layout must contain a RadioButton with id 'radio_angler'");
 
+        final RadioButton volantisgRadioButton = (RadioButton) findViewById(R.id.radio_volantisg);
+        if (volantisgRadioButton == null)
+            throw new IllegalStateException("Layout must contain a RadioButton with id 'radio_volantisg'");
+
         final Button submitButton = (Button) findViewById(R.id.button_submit);
         if (submitButton == null)
             throw new IllegalStateException("Layout must contain a Button with id 'button_submit'");
@@ -43,6 +47,12 @@ public final class MainActivity extends AppCompatActivity {
             if (!submitButton.isEnabled())
                 submitButton.setEnabled(true);
             tag = CheckerTags.ANGLER_CHECKER_TAG;
+        });
+
+        volantisgRadioButton.setOnClickListener(v -> {
+            if (!submitButton.isEnabled())
+                submitButton.setEnabled(true);
+            tag = CheckerTags.VOLANTISG_CHECKER_TAG;
         });
 
         submitButton.setOnClickListener(v -> {
